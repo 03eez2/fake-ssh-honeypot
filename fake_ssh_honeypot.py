@@ -107,10 +107,10 @@ def start_honeypot():
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
     try:
-         # Bind to port 22
-    server_socket.bind(('0.0.0.0', 22))
-    server_socket.listen(5)  # Make sure this line is indented the same
-    print(f"{GREEN}[+] Honeypot started successfully!{END}")
+        # Bind to port 22
+        server_socket.bind(('0.0.0.0', 22))
+        server_socket.listen(5)  # Make sure this line is indented the same
+        print(f"{GREEN}[+] Honeypot started successfully!{END}")
 
         while True:
             # Accept incoming connections
@@ -118,7 +118,8 @@ def start_honeypot():
             # Start a new thread to handle the client
             client_thread = threading.Thread(
                 target=simulate_ssh_session,
-                args=(client_socket, client_address))
+                args=(client_socket, client_address)
+            )
             client_thread.start()
 
     except PermissionError:
@@ -129,6 +130,7 @@ def start_honeypot():
         logging.error(f"Server error: {str(e)}")
     finally:
         server_socket.close()
+
 
 def main():
     """
