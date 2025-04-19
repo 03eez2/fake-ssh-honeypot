@@ -109,7 +109,6 @@ def start_honeypot():
     try:
         # Bind to port 22
        server_socket.bind(('0.0.0.0', 2222))
-
         server_socket.listen(5)
         print(f"{GREEN}[+] Honeypot started successfully!{END}")
 
