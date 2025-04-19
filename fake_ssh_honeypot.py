@@ -12,7 +12,6 @@ RED = "\033[91m"
 BOLD = "\033[1m"
 END = "\033[0m"
 
-# ASCII Art Banner for 3Z BOOT
 BANNER = f"""
 {BLUE}{BOLD}
  _____            _                                        _   
@@ -22,7 +21,7 @@ BANNER = f"""
 |____/  /___|    |_| |_|\___/|_| |_|\___|\__, | .__/ \___/ \__|
                                          |___/|_|              
 {BLUE}============================================================{END}
-       {GREEN}Fake SSH Honeypot v1.0 - by xAI{END}
+       {GREEN}Fake SSH Honeypot v1.0 - by 3z{END}
 {BLUE}{BOLD}============================================================{END}
 {RED}Warning: This is a honeypot to trap and log SSH attackers!{END}
 Listening on port 22... Press Ctrl+C to stop.
